@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700');
 
 * {
     box-sizing: border-box;
@@ -14,15 +14,23 @@ body {
     margin: 0 auto;
 }
 
+@mixin centerer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 #home {
-    width: 100%;
-    min-height: 100vh;
     background: url('../images/bg-header.jpg') round;
     background-size: cover;
 
     .home__header {
+        width: 100%;
+        min-height: 100vh;
         color: #fff;
         font-family: 'Montserrat', sans-serif;
+        position: relative;
 
         .home__nav {
             padding: 20px;
@@ -40,18 +48,78 @@ body {
                     font-weight: bold;
                     text-transform: uppercase;
                     letter-spacing: 2px;
+
                     .nav__element--link {
                         text-decoration: none;
                         color: #fff;
+
                         &:hover {
                             cursor: pointer;
                             color: #16a085;
-                            transition: .4s;
+                            transition: .5s;
                         }
                     }
+
                     .nav__icon {
                         filter: brightness(0) invert(1);
                     }
+                }
+            }
+        }
+
+        .header__content {
+            @include centerer;
+            width: 50%;
+            min-height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .content__header {
+                font-size: 2.2em;
+                text-transform: uppercase;
+                letter-spacing: 7px;
+                margin: 5px;
+            }
+
+            .content__span {
+                padding: 5px;
+                font-weight: 500;
+                letter-spacing: 3px;
+            }
+
+            .content__btn {
+                padding: 20px 40px;
+                margin-top: 25px;
+                background: #16a085;
+                color: #fff;
+                font-size: 0, 7rem;
+                font-weight: bold;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                border: none;
+                border-radius: 5px;
+            }
+        }
+
+        .icons__container {
+            position: absolute;
+            bottom: -2%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            color: white;
+            font-size: 26px;
+
+            .icons__element {
+                color: #fff;
+                padding: 10px;
+
+                &:hover {
+                    cursor: pointer;
+                    color: #16a085;
+                    transition: .5s;
                 }
             }
         }
