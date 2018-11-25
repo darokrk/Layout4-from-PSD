@@ -7,10 +7,11 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
-    max-width: 1800px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -21,6 +22,19 @@ body {
     transform: translate(-50%, -50%);
 }
 
+@mixin button {
+    padding: 20px 40px;
+    margin: 25px 20px;
+    background: #16a085;
+    color: #fff;
+    font-size: 0, 7rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+}
+
 #home {
     background: url('../images/bg-header.jpg') round;
     background-size: cover;
@@ -29,7 +43,6 @@ body {
         width: 100%;
         min-height: 100vh;
         color: #fff;
-        font-family: 'Montserrat', sans-serif;
         position: relative;
 
         .home__nav {
@@ -67,7 +80,7 @@ body {
             }
         }
 
-        .header__content {
+        .home__content {
             @include centerer;
             width: 50%;
             min-height: 300px;
@@ -75,6 +88,7 @@ body {
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            text-align: center;
 
             .content__header {
                 font-size: 2.2em;
@@ -90,16 +104,7 @@ body {
             }
 
             .content__btn {
-                padding: 20px 40px;
-                margin-top: 25px;
-                background: #16a085;
-                color: #fff;
-                font-size: 0, 7rem;
-                font-weight: bold;
-                letter-spacing: 2px;
-                text-transform: uppercase;
-                border: none;
-                border-radius: 5px;
+                @include button;
             }
         }
 
@@ -123,5 +128,56 @@ body {
                 }
             }
         }
+    }
+}
+
+#phone {
+    position: relative;
+    background: #f5f6f7;
+
+    .phone__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 35%;
+        min-height: 495px;
+        margin-left: 5%;
+        padding: 20px;
+
+        .content__header {
+            color: #16a085;
+            margin: 0;
+            padding: 20px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        .content__paragraph {
+            color: #373737;
+            margin: 0;
+            padding: 20px;
+            font-size: 14px;
+            letter-spacing: 3px;
+            line-height: 24px;
+
+            .paragraph__span {
+                font-weight: bold;
+            }
+        }
+
+        .content__btn {
+            @include button;
+            align-self: flex-start;
+        }
+    }
+
+    .iphone {
+        position: absolute;
+        width: 45%;
+        min-height: 705px;
+        top: 83px;
+        left: 40%;
+        background: url('../images/phone.png') no-repeat center;
     }
 }
