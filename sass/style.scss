@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    color: #373737;
 }
 
 .container {
@@ -173,11 +174,128 @@ body {
     }
 
     .iphone {
-        position: absolute;
         width: 45%;
-        min-height: 705px;
+        max-height: 411px;
+        position: absolute;
         top: 83px;
         left: 40%;
-        background: url('../images/phone.png') no-repeat center;
+        overflow: hidden;
+    }
+}
+
+#design {
+    position: relative;
+
+    .container--flex {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .design__content {
+        width: 35%;
+        min-height: 557px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: flex-end;
+        margin-right: 5%;
+        padding: 20px;
+
+        .content__header {
+            color: #16a085;
+            margin: 0;
+            padding: 20px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        .content__paragraph {
+            color: #373737;
+            margin: 0;
+            padding: 20px;
+            font-size: 14px;
+            letter-spacing: 3px;
+            line-height: 24px;
+
+            .paragraph__span {
+                font-weight: bold;
+            }
+        }
+
+        .content__btn {
+            @include button;
+            align-self: flex-start;
+        }
+
+        .content__numbers {
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            padding: 0 20px;
+        }
+
+        .content__icons {
+            font-size: 28px;
+            padding: 0 20px;
+            letter-spacing: 5px;
+
+            .icons__element {
+                color: #000;
+            }
+        }
+    }
+
+    .iphone {
+        max-height: 446px;
+        position: absolute;
+        top: 20%;
+        left: 9%;
+        overflow: hidden;
+    }
+}
+
+#community {
+    background: #f5f6f7;
+
+    .community__wrapper {
+        min-height: 482px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .wrapper__box {
+            width: 370px;
+            min-height: 244px;
+        }
+        .wrapper__box--text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            .content__header {
+                text-transform: uppercase;
+                margin: 0;
+                padding: 20px;
+                letter-spacing: 3px;
+            }
+            .content__paragraph {
+                font-size: 14px;
+                margin: 0;
+                padding: 0 20px;
+                line-height: 24px;
+            }
+        }
+        .wrapper__box--image1 {
+            background: url('../images/bus.jpg') no-repeat center;
+            background-size: cover;
+        }
+        .wrapper__box--image2 {
+            background: url('../images/flowers.jpg') no-repeat center;
+            background-size: cover;
+        }
     }
 }

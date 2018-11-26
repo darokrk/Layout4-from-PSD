@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700");
 * { box-sizing: border-box; }
 
-body { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
+body { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; color: #373737; }
 
 .container { max-width: 1600px; margin: 0 auto; }
 
@@ -47,4 +47,42 @@ body { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
 
 #phone .phone__content .content__btn { padding: 20px 40px; margin: 25px 20px; background: #16a085; color: #fff; font-size: 0, 7rem; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; border: none; border-radius: 5px; -ms-flex-item-align: start; align-self: flex-start; }
 
-#phone .iphone { position: absolute; width: 45%; min-height: 705px; top: 83px; left: 40%; background: url("../images/phone.png") no-repeat center; }
+#phone .iphone { width: 45%; max-height: 411px; position: absolute; top: 83px; left: 40%; overflow: hidden; }
+
+#design { position: relative; }
+
+#design .container--flex { display: -ms-flexbox; display: flex; -ms-flex-pack: end; justify-content: flex-end; }
+
+#design .design__content { width: 35%; min-height: 557px; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: center; justify-content: center; -ms-flex-item-align: end; align-self: flex-end; margin-right: 5%; padding: 20px; }
+
+#design .design__content .content__header { color: #16a085; margin: 0; padding: 20px; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 5px; }
+
+#design .design__content .content__paragraph { color: #373737; margin: 0; padding: 20px; font-size: 14px; letter-spacing: 3px; line-height: 24px; }
+
+#design .design__content .content__paragraph .paragraph__span { font-weight: bold; }
+
+#design .design__content .content__btn { padding: 20px 40px; margin: 25px 20px; background: #16a085; color: #fff; font-size: 0, 7rem; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; border: none; border-radius: 5px; -ms-flex-item-align: start; align-self: flex-start; }
+
+#design .design__content .content__numbers { font-size: 12px; font-weight: bold; letter-spacing: 2px; padding: 0 20px; }
+
+#design .design__content .content__icons { font-size: 28px; padding: 0 20px; letter-spacing: 5px; }
+
+#design .design__content .content__icons .icons__element { color: #000; }
+
+#design .iphone { max-height: 446px; position: absolute; top: 20%; left: 9%; overflow: hidden; }
+
+#community { background: #f5f6f7; }
+
+#community .community__wrapper { min-height: 482px; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+#community .community__wrapper .wrapper__box { width: 370px; min-height: 244px; }
+
+#community .community__wrapper .wrapper__box--text { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; text-align: center; }
+
+#community .community__wrapper .wrapper__box--text .content__header { text-transform: uppercase; margin: 0; padding: 20px; letter-spacing: 3px; }
+
+#community .community__wrapper .wrapper__box--text .content__paragraph { font-size: 14px; margin: 0; padding: 0 20px; line-height: 24px; }
+
+#community .community__wrapper .wrapper__box--image1 { background: url("../images/bus.jpg") no-repeat center; background-size: cover; }
+
+#community .community__wrapper .wrapper__box--image2 { background: url("../images/flowers.jpg") no-repeat center; background-size: cover; }
