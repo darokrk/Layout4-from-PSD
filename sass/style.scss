@@ -308,6 +308,7 @@ body {
 #mail {
     background: url('../images/bg-input.jpg') no-repeat center;
     background-size: cover;
+    background-attachment: fixed;
     min-height: 790px;
     position: relative;
 
@@ -341,6 +342,99 @@ body {
             padding: 20px;
             vertical-align: bottom;
             border-radius: 0 5px 5px 0;
+
+            &:hover {
+                cursor: pointer;
+                background: #ed1491;
+                transition: .8s;
+            }
+        }
+    }
+}
+
+#download {
+    background: #f5f6f7;
+
+    .download__wrapper {
+        min-height: 396px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .wrapper__content {
+            text-align: center;
+            width: 70%;
+
+            .content__header {
+                text-transform: uppercase;
+                margin: 0;
+                padding: 20px;
+                letter-spacing: 3px;
+            }
+
+            .content__paragraph {
+                font-size: 14px;
+                margin: 0;
+                padding: 0 20px;
+                line-height: 24px;
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+
+            .content__buttons {
+                padding: 0 20px;
+                display: flex;
+                justify-content: center;
+
+                .buttons__box {
+                    background: #1abc9c;
+                    color: #fff;
+                    width: 280px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 25px 10px;
+                    padding-left: 25px;
+                    border: none;
+                    border-radius: 3px;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                }
+
+                .box__btn {
+                    height: 100%;
+                    font-size: 20px;
+                    padding: 0;
+                    width: 50px;
+                    border: none;
+                    background: #16a085;
+                    border-radius: 0 3px 3px 0;
+                    outline: none;
+
+                    &:hover {
+                        cursor: pointer;
+                        background: #ed1491;
+                        transition: .8s;
+                    }
+
+                    .btn__link {
+                        color: #fff;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+
+                        .btn__icon {
+                            position: absolute;
+                            @include centerer;
+                        }
+                    }
+                }
+            }
         }
     }
 }
