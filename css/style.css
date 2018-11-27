@@ -120,3 +120,19 @@ body { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; color: #373
 #download .download__wrapper .wrapper__content .content__buttons .box__btn .btn__link { color: #fff; display: block; width: 100%; height: 100%; position: relative; }
 
 #download .download__wrapper .wrapper__content .content__buttons .box__btn .btn__link .btn__icon { position: absolute; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+footer { background: #f5f6f7; }
+
+footer .footer__wrapper { min-height: 131px; display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-align: center; align-items: center; font-weight: bold; }
+
+footer .footer__wrapper .content__list { display: -ms-flexbox; display: flex; list-style-type: none; -ms-flex-pack: left; justify-content: left; padding: 0 20px; text-transform: uppercase; letter-spacing: 3px; }
+
+footer .footer__wrapper .content__list .list__element { position: relative; margin: 5px 10px; }
+
+footer .footer__wrapper .content__list .list__element:first-child { margin-left: 0; }
+
+footer .footer__wrapper .content__list .list__element::after { position: absolute; top: 0; right: -9px; content: ''; display: block; height: 100%; width: 2px; background: #16a085; }
+
+footer .footer__wrapper .content__paragraph { letter-spacing: 2px; padding: 0 20px; }
+
+footer .footer__wrapper .wrapper__icon { padding: 20px; }
