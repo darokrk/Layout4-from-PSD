@@ -27,7 +27,7 @@ body { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; color: #373
 
 #home .home__header .home__content .content__span { padding: 5px; font-weight: 500; letter-spacing: 3px; }
 
-#home .home__header .home__content .content__btn { padding: 20px 40px; margin: 25px 20px; background: #16a085; color: #fff; font-size: 0, 7rem; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; border: none; border-radius: 5px; }
+#home .home__header .home__content .content__btn { padding: 20px 40px; margin: 25px 20px; background: #16a085; color: #fff; font-size: 0, 7rem; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; border: none; border-radius: 5px; outline: none; }
 
 #home .home__header .icons__container { position: absolute; bottom: -2%; left: 50%; transform: translate(-50%, -50%); padding: 10px; color: white; font-size: 26px; }
 
@@ -45,7 +45,7 @@ body { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; color: #373
 
 #phone .phone__content .content__paragraph .paragraph__span { font-weight: bold; }
 
-#phone .phone__content .content__btn { padding: 20px 40px; margin: 25px 20px; background: #16a085; color: #fff; font-size: 0, 7rem; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; border: none; border-radius: 5px; -ms-flex-item-align: start; align-self: flex-start; }
+#phone .phone__content .content__btn { padding: 20px 40px; margin: 25px 20px; background: #16a085; color: #fff; font-size: 0, 7rem; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; border: none; border-radius: 5px; outline: none; -ms-flex-item-align: start; align-self: flex-start; }
 
 #phone .iphone { width: 45%; max-height: 411px; position: absolute; top: 83px; left: 40%; overflow: hidden; }
 
@@ -61,7 +61,7 @@ body { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; color: #373
 
 #design .design__content .content__paragraph .paragraph__span { font-weight: bold; }
 
-#design .design__content .content__btn { padding: 20px 40px; margin: 25px 20px; background: #16a085; color: #fff; font-size: 0, 7rem; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; border: none; border-radius: 5px; -ms-flex-item-align: start; align-self: flex-start; }
+#design .design__content .content__btn { padding: 20px 40px; margin: 25px 20px; background: #16a085; color: #fff; font-size: 0, 7rem; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; border: none; border-radius: 5px; outline: none; -ms-flex-item-align: start; align-self: flex-start; }
 
 #design .design__content .content__numbers { font-size: 12px; font-weight: bold; letter-spacing: 2px; padding: 0 20px; }
 
@@ -86,3 +86,13 @@ body { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; color: #373
 #community .community__wrapper .wrapper__box--image1 { background: url("../images/bus.jpg") no-repeat center; background-size: cover; }
 
 #community .community__wrapper .wrapper__box--image2 { background: url("../images/flowers.jpg") no-repeat center; background-size: cover; }
+
+#mail { background: url("../images/bg-input.jpg") no-repeat center; background-size: cover; min-height: 790px; position: relative; }
+
+#mail .mail__content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40%; text-align: center; }
+
+#mail .mail__content .mail__header { color: #fff; margin: 0; padding: 20px; font-size: 1.8rem; text-transform: uppercase; letter-spacing: 5px; }
+
+#mail .mail__content .mail__input { font-size: 21px; margin: 0; border: 0; padding: 15px 30px; border-radius: 5px; outline: none; }
+
+#mail .mail__content .mail__btn { padding: 20px 40px; margin: 25px 20px; background: #16a085; color: #fff; font-size: 0, 7rem; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; border: none; border-radius: 5px; outline: none; margin: 0; margin-left: -10px; padding: 20px; vertical-align: bottom; border-radius: 0 5px 5px 0; }

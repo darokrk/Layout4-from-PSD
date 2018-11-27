@@ -34,6 +34,7 @@ body {
     text-transform: uppercase;
     border: none;
     border-radius: 5px;
+    outline: none;
 }
 
 #home {
@@ -269,6 +270,7 @@ body {
             width: 370px;
             min-height: 244px;
         }
+
         .wrapper__box--text {
             display: flex;
             flex-direction: column;
@@ -282,6 +284,7 @@ body {
                 padding: 20px;
                 letter-spacing: 3px;
             }
+
             .content__paragraph {
                 font-size: 14px;
                 margin: 0;
@@ -289,13 +292,55 @@ body {
                 line-height: 24px;
             }
         }
+
         .wrapper__box--image1 {
             background: url('../images/bus.jpg') no-repeat center;
             background-size: cover;
         }
+
         .wrapper__box--image2 {
             background: url('../images/flowers.jpg') no-repeat center;
             background-size: cover;
+        }
+    }
+}
+
+#mail {
+    background: url('../images/bg-input.jpg') no-repeat center;
+    background-size: cover;
+    min-height: 790px;
+    position: relative;
+
+    .mail__content {
+        @include centerer;
+        width: 40%;
+        text-align: center;
+
+        .mail__header {
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        .mail__input {
+            font-size: 21px;
+            margin: 0;
+            border: 0;
+            padding: 15px 30px;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .mail__btn {
+            @include button;
+            margin: 0;
+            margin-left: -10px;
+            padding: 20px;
+            vertical-align: bottom;
+            border-radius: 0 5px 5px 0;
         }
     }
 }
