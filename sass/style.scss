@@ -35,6 +35,42 @@ body {
     border: none;
     border-radius: 5px;
     outline: none;
+
+    &:hover {
+        background: #2980b9;
+        cursor: pointer;
+        transition: .5s;
+    }
+}
+
+@mixin white__header {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    margin: 5px;
+}
+
+@mixin green__header {
+    color: #16a085;
+    margin: 0;
+    padding: 20px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+@mixin content__paragraph {
+    margin: 0;
+    padding: 20px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    line-height: 24px;
+}
+
+@mixin flex__center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #home {
@@ -51,20 +87,18 @@ body {
             padding: 20px;
 
             .nav__list {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flex__center;
                 flex-wrap: wrap;
                 list-style-type: none;
 
-                .nav__element {
+                .list__element {
                     margin: 20px 50px;
                     font-size: 16px;
                     font-weight: bold;
                     text-transform: uppercase;
                     letter-spacing: 2px;
 
-                    .nav__element--link {
+                    .list__element--link {
                         text-decoration: none;
                         color: #fff;
 
@@ -75,37 +109,33 @@ body {
                         }
                     }
 
-                    .nav__icon {
+                    .list__icon {
                         filter: brightness(0) invert(1);
                     }
                 }
             }
         }
 
-        .home__content {
+        .home__slogan {
             @include centerer;
             width: 50%;
             min-height: 300px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex__center;
             flex-direction: column;
             text-align: center;
 
-            .content__header {
+            .slogan__header {
+                @include white__header;
                 font-size: 2.2em;
-                text-transform: uppercase;
-                letter-spacing: 7px;
-                margin: 5px;
             }
 
-            .content__span {
+            .slogan__span {
                 padding: 5px;
                 font-weight: 500;
                 letter-spacing: 3px;
             }
 
-            .content__btn {
+            .slogan__btn {
                 @include button;
             }
         }
@@ -119,7 +149,7 @@ body {
             color: white;
             font-size: 26px;
 
-            .icons__element {
+            .icons__container--element {
                 color: #fff;
                 padding: 10px;
 
@@ -138,15 +168,14 @@ body {
     background: #f5f6f7;
 
     .phone__content {
-        display: flex;
+        @include flex__center;
         flex-direction: column;
-        justify-content: center;
         width: 35%;
         min-height: 495px;
         margin-left: 5%;
         padding: 20px;
 
-        .content__header {
+        .phone__header {
             color: #16a085;
             margin: 0;
             padding: 20px;
@@ -155,26 +184,21 @@ body {
             letter-spacing: 5px;
         }
 
-        .content__paragraph {
-            color: #373737;
-            margin: 0;
-            padding: 20px;
-            font-size: 14px;
-            letter-spacing: 3px;
-            line-height: 24px;
+        .phone__paragraph {
+            @include content__paragraph;
 
-            .paragraph__span {
+            .phone__paragraph--span {
                 font-weight: bold;
             }
         }
 
-        .content__btn {
+        .phone__btn {
             @include button;
             align-self: flex-start;
         }
     }
 
-    .iphone {
+    .phone__iphone {
         width: 45%;
         max-height: 411px;
         position: absolute;
@@ -202,52 +226,42 @@ body {
         margin-right: 5%;
         padding: 20px;
 
-        .content__header {
-            color: #16a085;
-            margin: 0;
-            padding: 20px;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 5px;
+        .design__header {
+            @include green__header;
         }
 
-        .content__paragraph {
-            color: #373737;
-            margin: 0;
-            padding: 20px;
-            font-size: 14px;
-            letter-spacing: 3px;
-            line-height: 24px;
+        .design__paragraph {
+            @include content__paragraph;
 
-            .paragraph__span {
+            .design__paragraph--span {
                 font-weight: bold;
             }
         }
 
-        .content__btn {
+        .design__btn {
             @include button;
             align-self: flex-start;
         }
 
-        .content__numbers {
+        .design__numbers {
             font-size: 12px;
             font-weight: bold;
             letter-spacing: 2px;
             padding: 0 20px;
         }
 
-        .content__icons {
+        .design__icons {
             font-size: 28px;
             padding: 0 20px;
             letter-spacing: 5px;
 
-            .icons__element {
+            .design__icons--element {
                 color: #000;
             }
         }
     }
 
-    .iphone {
+    .design__iphone {
         max-height: 446px;
         position: absolute;
         top: 20%;
@@ -272,20 +286,16 @@ body {
         }
 
         .wrapper__box--text {
-            display: flex;
+            @include flex__center;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             text-align: center;
 
-            .content__header {
-                text-transform: uppercase;
-                margin: 0;
-                padding: 20px;
-                letter-spacing: 3px;
+            .wrapper__header {
+                @include green__header;
+                color: #373737;
             }
 
-            .content__paragraph {
+            .wrapper__paragraph {
                 font-size: 14px;
                 margin: 0;
                 padding: 0 20px;
@@ -318,12 +328,9 @@ body {
         text-align: center;
 
         .mail__header {
-            color: #fff;
-            margin: 0;
+            @include white__header;
             padding: 20px;
             font-size: 1.8rem;
-            text-transform: uppercase;
-            letter-spacing: 5px;
         }
 
         .mail__input {
@@ -342,38 +349,27 @@ body {
             padding: 20px;
             vertical-align: bottom;
             border-radius: 0 5px 5px 0;
-
-            &:hover {
-                cursor: pointer;
-                background: #ed1491;
-                transition: .8s;
-            }
         }
     }
 }
 
 #download {
-    background: #f5f6f7;
 
     .download__wrapper {
         min-height: 396px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex__center;
         flex-direction: column;
 
         .wrapper__content {
             text-align: center;
             width: 70%;
 
-            .content__header {
-                text-transform: uppercase;
-                margin: 0;
-                padding: 20px;
-                letter-spacing: 3px;
+            .wrapper__header {
+                @include green__header;
+                color: #373737;
             }
 
-            .content__paragraph {
+            .wrapper__paragraph {
                 font-size: 14px;
                 margin: 0;
                 padding: 0 20px;
@@ -382,7 +378,7 @@ body {
                 font-weight: 500;
             }
 
-            .content__buttons {
+            .wrapper__buttons {
                 padding: 0 20px;
                 display: flex;
                 justify-content: center;
@@ -416,9 +412,9 @@ body {
                     outline: none;
 
                     &:hover {
+                        background: #2980b9;
                         cursor: pointer;
-                        background: #ed1491;
-                        transition: .8s;
+                        transition: .5s;
                     }
 
                     .btn__link {
@@ -447,44 +443,50 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0 20px;
         font-weight: bold;
 
-        .content__list {
-            display: flex;
-            list-style-type: none;
-            justify-content: left;
-            padding: 0 20px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
+        .wrapper__list {
+            margin-left: 5%;
 
-            .list__element {
-                position: relative;
-                margin: 5px 10px;
+            .list__content {
+                display: flex;
+                justify-content: left;
+                padding: 0 20px;
+                list-style-type: none;
+                text-transform: uppercase;
+                letter-spacing: 3px;
 
-                &:first-child {
-                    margin-left: 0;
-                }
+                .list__content--element {
+                    position: relative;
+                    margin: 5px 10px;
 
-                &::after {
-                    position: absolute;
-                    top: 0;
-                    right: -9px;
-                    content: '';
-                    display: block;
-                    height: 100%;
-                    width: 2px;
-                    background: #16a085;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    &::after {
+                        position: absolute;
+                        top: 0;
+                        right: -9px;
+                        content: '';
+                        display: block;
+                        height: 100%;
+                        width: 2px;
+                        background: #16a085;
+                    }
                 }
             }
-        }
 
-        .content__paragraph {
-            letter-spacing: 2px;
-            padding: 0 20px;
+            .list__paragraph {
+                letter-spacing: 2px;
+                padding: 0 20px;
+            }
         }
 
         .wrapper__icon {
             padding: 20px;
+            margin-right: 5%;
         }
     }
 }
