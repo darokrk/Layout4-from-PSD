@@ -13,18 +13,24 @@
 
 <body>
     <section id="home">
-        <div class="container">
+        <div class="container container--vh">
             <header class="home__header">
+                <div class="mobile__wrapper">
+                    <div class="mobile__icon-1"></div>
+                    <div class="mobile__icon-2"></div>
+                    <div class="mobile__icon-3"></div>
+                </div>
                 <nav class="home__nav">
                     <ul class="nav__list">
                         <li class="list__element"><a class="list__element--link" href="#home">Home</a></li>
-                        <li class="list__element"><a class="list__element--link" href="">Photoapp</a></li>
+                        <li class="list__element"><a class="list__element--link" href="#phone">Photoapp</a></li>
                         <li class="list__element"><img class="list__icon" src="./images/nav-camera.png" alt="camera-icon"></li>
-                        <li class="list__element"><a class="list__element--link" href="">Design</a></li>
-                        <li class="list__element"><a class="list__element--link" href="">Download</a></li>
+                        <li class="list__element"><a class="list__element--link" href="#design">Design</a></li>
+                        <li class="list__element"><a class="list__element--link" href="#download">Download</a></li>
                     </ul>
                 </nav>
-                <div class="home__slogan">
+            </header>
+            <div class="home__slogan">
                     <h1 class="slogan__header">Your life , a photo</h1>
                     <span class="slogan__span">print your life in a simple photo</span>
                     <button class="slogan__btn">Get started</button>
@@ -34,7 +40,6 @@
                     <a class="icons__container--element" href="https://www.flickr.com/" target="_blank"><i class="fab fa-flickr"></i></a>
                     <a class="icons__container--element" href="https://dribbble.com/" target="_blank"><i class="fab fa-dribbble"></i></a>
                 </div>
-            </header>
         </div>
     </section>
     <section id="phone">
@@ -125,7 +130,7 @@
             </div>
         </div>
     </section>
-    <footer>
+    <footer id="footer">
         <div class="container">
             <div class="footer__wrapper">
                 <div class="wrapper__list">
@@ -142,6 +147,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/script.js"></script>
+    
 </body>
 
 </html>
