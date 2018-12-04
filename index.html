@@ -31,15 +31,15 @@
                 </nav>
             </header>
             <div class="home__slogan">
-                    <h1 class="slogan__header">Your life , a photo</h1>
-                    <span class="slogan__span">print your life in a simple photo</span>
-                    <button class="slogan__btn">Get started</button>
-                </div>
-                <div class="icons__container">
-                    <a class="icons__container--element" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a class="icons__container--element" href="https://www.flickr.com/" target="_blank"><i class="fab fa-flickr"></i></a>
-                    <a class="icons__container--element" href="https://dribbble.com/" target="_blank"><i class="fab fa-dribbble"></i></a>
-                </div>
+                <h1 class="slogan__header">Your life , a photo</h1>
+                <span class="slogan__span">print your life in a simple photo</span>
+                <button class="slogan__btn">Get started</button>
+            </div>
+            <div class="icons__container">
+                <a class="icons__container--element" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a class="icons__container--element" href="https://www.flickr.com/" target="_blank"><i class="fab fa-flickr"></i></a>
+                <a class="icons__container--element" href="https://dribbble.com/" target="_blank"><i class="fab fa-dribbble"></i></a>
+            </div>
         </div>
     </section>
     <section id="phone">
@@ -53,7 +53,7 @@
                 <button class="phone__btn">Get started</button>
             </div>
             <div class="phone__iphone">
-                <img src="./images/phone.png" alt="hand with iphone">
+                <img class="iphone__img" src="./images/phone.png" alt="hand with iphone">
             </div>
         </div>
     </section>
@@ -73,7 +73,7 @@
                 </div>
             </div>
             <div class="design__iphone">
-                <img src="./images/phone-2.png" alt="iphone">
+                <img class="iphone__img" src="./images/phone-2.png" alt="iphone">
             </div>
         </div>
     </section>
@@ -110,20 +110,24 @@
                         placeat. Distinctio.</p>
                     <div class="wrapper__buttons">
                         <div class="buttons__box">
-                            Apple store
-                            <button class="box__btn">
-                                <a class="btn__link" href="https://www.apple.com/pl/ios/app-store/" target="_blank">
-                                    <i class="btn__icon fab fa-apple"></i>
+                            <div class="box__text">
+                                <a class="box__link" href="https://play.google.com/store" target="_blank">Apple store</a>
+                            </div>
+                            <div class="box__icon">
+                                <a class="icon__link" href="https://www.apple.com/pl/ios/app-store/" target="_blank">
+                                    <i class="link__icon fab fa-apple"></i>
                                 </a>
-                            </button>
+                            </div>
                         </div>
                         <div class="buttons__box">
-                            Play store
-                            <button class="box__btn">
-                                <a class="btn__link" href="https://play.google.com/store" target="_blank">
-                                    <i class="btn__icon fab fa-android"></i>
+                            <div class="box__text">
+                                <a class="box__link" href="https://play.google.com/store" target="_blank">Play store</a>
+                            </div>
+                            <div class="box__icon">
+                                <a class="icon__link" href="https://play.google.com/store" target="_blank">
+                                    <i class="link__icon fab fa-android"></i>
                                 </a>
-                            </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -135,9 +139,15 @@
             <div class="footer__wrapper">
                 <div class="wrapper__list">
                     <ul class="list__content">
-                        <li class="list__content--element">Credits</li>
-                        <li class="list__content--element">Privacy</li>
-                        <li class="list__content--element">Our teams</li>
+                        <li class="list__content--element">
+                            <a class="list__element--link" href="#">Credits</a>
+                        </li>
+                        <li class="list__content--element">
+                            <a class="list__element--link" href="#">Privacy</a>
+                        </li>
+                        <li class="list__content--element">
+                            <a class="list__element--link" href="#">Our teams</a>
+                        </li>
                     </ul>
                     <p class="list__paragraph">Copyright by phototime - all right reserved</p>
                 </div>
@@ -149,7 +159,7 @@
     </footer>
 
     <script src="js/script.js"></script>
-    
+
 </body>
 
 </html>

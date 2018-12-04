@@ -32,7 +32,7 @@ body {
     margin: 25px 20px;
     background: #16a085;
     color: #fff;
-    font-size: 0, 7rem;
+    font-size: 0.75rem;
     font-weight: bold;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -66,7 +66,7 @@ body {
 @mixin content__paragraph {
     margin: 0;
     padding: 20px;
-    font-size: 14px;
+    font-size: .87rem;
     letter-spacing: 3px;
     line-height: 24px;
 }
@@ -75,6 +75,82 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin mobile__nav {
+    .home__header {
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px;
+
+        .mobile__wrapper {
+            z-index: 1;
+
+            .mobile__icon-1,
+            .mobile__icon-2,
+            .mobile__icon-3 {
+                width: 35px;
+                height: 4px;
+                background-color: #fff;
+                margin: 6px 0;
+                transition: 0.4s;
+            }
+        }
+
+        .home__nav {
+            position: absolute;
+            text-align: center;
+            padding: 0;
+
+            .nav__list {
+                display: block;
+                margin: 0;
+                padding: 0;
+
+                .list__element {
+                    display: none;
+                }
+            }
+        }
+
+        .change .mobile__icon-1 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+
+        .change .mobile__icon-2 {
+            opacity: 0;
+        }
+
+        .change .mobile__icon-3 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+
+        .change__menu {
+            background: rgba(0, 0, 0, 0.9);
+            top: 0;
+            right: 0;
+
+            .nav__list {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+
+                .list__element {
+                    display: block;
+                    font-size: 1.7rem;
+                    margin: 20px;
+                }
+            }
+        }
+    }
+
+    .home__slogan {
+        height: 90%;
+        padding: 20px;
+    }
 }
 
 #home {
@@ -348,6 +424,7 @@ body {
         .mail__btn {
             @include button;
             margin: 0;
+            font-size: .8rem;
             margin-left: -10px;
             padding: 20px;
             vertical-align: bottom;
@@ -385,6 +462,7 @@ body {
                 padding: 0 20px;
                 display: flex;
                 justify-content: center;
+                flex-wrap: wrap;
 
                 .buttons__box {
                     background: #1abc9c;
@@ -395,16 +473,35 @@ body {
                     justify-content: space-between;
                     align-items: center;
                     margin: 25px 10px;
-                    padding-left: 25px;
                     border: none;
                     border-radius: 3px;
                     font-size: 16px;
                     text-transform: uppercase;
                     font-weight: bold;
                     letter-spacing: 2px;
+
+                    &:hover {
+                        background: #3498db;
+                        cursor: pointer;
+                        transition: .5s;
+
+                        .box__icon {
+                            background: #2980b9;
+                            transition: .5s;
+                        }
+                    }
+
+                    .box__text {
+                        width: 65%;
+
+                        .box__link {
+                            color: #fff;
+                            text-decoration: none;
+                        }
+                    }
                 }
 
-                .box__btn {
+                .box__icon {
                     height: 100%;
                     font-size: 20px;
                     padding: 0;
@@ -414,20 +511,14 @@ body {
                     border-radius: 0 3px 3px 0;
                     outline: none;
 
-                    &:hover {
-                        background: #2980b9;
-                        cursor: pointer;
-                        transition: .5s;
-                    }
-
-                    .btn__link {
+                    .icon__link {
                         color: #fff;
                         display: block;
                         width: 100%;
                         height: 100%;
                         position: relative;
 
-                        .btn__icon {
+                        .link__icon {
                             position: absolute;
                             @include centerer;
                         }
@@ -438,7 +529,7 @@ body {
     }
 }
 
-footer {
+#footer {
     background: #f5f6f7;
 
     .footer__wrapper {
@@ -479,6 +570,16 @@ footer {
                         background: #16a085;
                     }
                 }
+
+                .list__element--link {
+                    color: #373737;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: #16a085;
+                        transition: .5s;
+                    }
+                }
             }
 
             .list__paragraph {
@@ -496,79 +597,7 @@ footer {
 
 @media (max-width: 767px) {
     #home {
-        .home__header {
-            display: flex;
-            justify-content: flex-end;
-            padding: 20px;
-
-            .mobile__wrapper {
-                z-index: 1;
-
-                .mobile__icon-1,
-                .mobile__icon-2,
-                .mobile__icon-3 {
-                    width: 35px;
-                    height: 4px;
-                    background-color: #fff;
-                    margin: 6px 0;
-                    transition: 0.4s;
-                }
-            }
-
-            .home__nav {
-                position: absolute;
-                text-align: center;
-
-                .nav__list {
-                    display: block;
-                    margin: 0;
-                    padding: 0;
-
-                    .list__element {
-                        display: none;
-                    }
-                }
-            }
-
-            .change .mobile__icon-1 {
-                -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-                transform: rotate(-45deg) translate(-9px, 6px);
-            }
-
-            .change .mobile__icon-2 {
-                opacity: 0;
-            }
-
-            .change .mobile__icon-3 {
-                -webkit-transform: rotate(45deg) translate(-8px, -8px);
-                transform: rotate(45deg) translate(-8px, -8px);
-            }
-
-            .change__menu {
-                width: 100vw;
-                height: 100vh;
-                background: rgba(0, 0, 0, 0.9);
-                top: 0;
-                right: 0;
-
-                .nav__list {
-                    position: absolute;
-                    top: 20%;
-                    left: 10%;
-
-                    .list__element {
-                        display: block;
-                        font-size: 35px;
-                        margin: 20px;
-                    }
-                }
-            }
-        }
-
-        .home__slogan {
-            height: 90%;
-            padding: 20px;
-        }
+        @include mobile__nav;
     }
 
     #phone {
@@ -585,6 +614,11 @@ footer {
         .phone__iphone {
             position: inherit;
             width: 100%;
+            padding-right: 20px;
+
+            .iphone__img {
+                width: 100%;
+            }
         }
     }
 
@@ -604,8 +638,13 @@ footer {
             }
 
             .design__iphone {
-                max-height: 350px;
+                max-height: 380px;
                 position: inherit;
+                padding-right: 10px;
+
+                .iphone__img {
+                    width: 100%;
+                }
             }
         }
     }
@@ -624,12 +663,18 @@ footer {
         .mail__content {
             width: 100%;
 
+            .mail__header {
+                font-size: 1.6rem;
+            }
+
             .mail__input {
                 padding: 10px 20px;
+                font-size: 16px;
             }
 
             .mail__btn {
                 padding: 15px;
+                font-size: .5rem;
             }
         }
     }
@@ -641,12 +686,8 @@ footer {
             .wrapper__content {
                 width: 100%;
 
-                .wrapper__buttons {
-                    flex-wrap: wrap;
-
-                    .buttons__box {
-                        padding-left: 50px;
-                    }
+                .wrapper__buttons .buttons__box .box__text {
+                    width: 90%;
                 }
             }
         }
@@ -673,5 +714,196 @@ footer {
                 margin-right: 0;
             }
         }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    #home {
+        @include mobile__nav;
+
+        .home__slogan {
+            .slogan__header {
+                font-size: 3rem;
+            }
+
+            .slogan__span {
+                font-size: 1.7rem;
+            }
+
+            .slogan__btn {
+                font-size: 16px;
+            }
+        }
+
+        .home__header .home__nav .nav__list .list__element {
+            font-size: 40px;
+        }
+    }
+
+    #phone {
+        .phone__content {
+            width: 100%;
+            margin-left: 0;
+            text-align: center;
+
+            .phone__header {
+                font-size: 1.7rem;
+            }
+
+            .phone__paragraph {
+                font-size: 18px;
+            }
+
+            .phone__btn {
+                align-self: center;
+                font-size: 16px;
+            }
+        }
+
+        .phone__iphone {
+            position: inherit;
+            width: 100%;
+            padding-right: 20px;
+            max-height: 580px;
+
+            .iphone__img {
+                width: 100%;
+            }
+        }
+    }
+
+    #design {
+        .container--flex {
+            flex-wrap: wrap;
+            flex-direction: column;
+
+            .design__content {
+                width: 100%;
+                margin-right: 0;
+                text-align: center;
+
+                .design__header {
+                    font-size: 1.7rem;
+                }
+
+                .design__paragraph {
+                    font-size: 18px;
+                }
+
+                .design__btn {
+                    align-self: center;
+                    font-size: 16px;
+                }
+
+                .design__numbers {
+                    font-size: 15px;
+                }
+
+                .design__icons {
+                    font-size: 30px;
+                }
+            }
+
+            .design__iphone {
+                max-height: 580px;
+                position: inherit;
+
+                .iphone__img {
+                    width: 82%;
+                }
+            }
+        }
+    }
+
+    #community {
+        .community__wrapper {
+            .wrapper__box {
+                width: 80%;
+                min-height: 350px;
+                margin: 30px 0;
+
+                &:last-child {
+                    margin-bottom: 60px;
+                }
+            }
+
+            .wrapper__box--text {
+                margin: 60px 0 20px;
+
+                .wrapper__header {
+                    font-size: 1.7rem;
+                }
+
+                .wrapper__paragraph {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    #mail {
+        .mail__content {
+            width: 100%;
+
+            .mail__header {
+                font-size: 2.2rem;
+            }
+
+            .mail__btn {
+                font-size: .8rem;
+            }
+        }
+    }
+
+    #download {
+        .download__wrapper {
+            min-height: 650px;
+            padding: 20px;
+
+            .wrapper__content {
+                width: 100%;
+
+                .wrapper__header {
+                    font-size: 1.7rem;
+                }
+
+                .wrapper__paragraph {
+                    font-size: 18px;
+                    line-height: 30px;
+                }
+
+                .wrapper__buttons {
+                    flex-wrap: wrap;
+
+                    .buttons__box .box__text {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1400px) {
+    #phone {
+        .phone__iphone {
+            width: 100%;
+            left: 35%;
+        }
+    }
+
+    #community {
+        .community__wrapper {
+            .wrapper__box {
+                width: 80%;
+                min-height: 350px;
+                margin: 30px 0;
+
+                &:last-child {
+                    margin-bottom: 60px;
+                }
+            }
+        }
+
     }
 }
