@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   const navBtn = document.querySelector(".mobile__wrapper");
   const navMenu = document.querySelector(".home__nav");
-  navBtn.addEventListener("click", function () {
+  navBtn.addEventListener("click", () => {
     navBtn.classList.toggle("change");
-    navMenu.classList.toggle("change__menu");
+    navMenu.classList.toggle("mobile__menu--active");
   });
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
+    anchor.addEventListener("click", function(e) {
       e.preventDefault();
 
       document.querySelector(this.getAttribute("href")).scrollIntoView({
@@ -16,9 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const forwardIcon = document.querySelector(".design__icons").children[1];
-  const reverseIcon = document.querySelector(".design__icons").children[0];
-  const iphoneImage = document.querySelector(".design__iphone").children[0];
+  const forwardIcon = document.querySelector(".design-icons__wrapper")
+    .children[1];
+  const reverseIcon = document.querySelector(".design-icons__wrapper")
+    .children[0];
+  const iphoneImage = document.querySelector(".design-phone__wrapper")
+    .children[0];
   const phoneCount = document.querySelector(".design__numbers");
 
   const photos = [
